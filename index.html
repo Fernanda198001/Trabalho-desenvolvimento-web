@@ -53,22 +53,37 @@
 
     </section>
 
-    <!--Contato-->
+    <!-- ========== SEÇÃO: CONTATO ========== -->
+<section id="contato">
+    <h2>Contato</h2>
 
-    <section id="contato">
-        <h2>Email para contato</h2>
-        <p><a href="mailto:fernandarodriguescosta991@gmail.com">fernandarodriguescosta991@gmail.com</a></p>
-    </section>
+    <form id="form-contato">
 
-    <!--Comentários-->
-    <section id="comentarios">
-        <h2>Deixe um comentário</h2>
-        <div class="form-comentario">
-            <textarea id="campo-comentario" placeholder="Escreva seu comentário aqui..."></textarea>
-            <button id="btn-enviar">Enviar comentário</button>
-            <p id="msg-enviada" class="msg-enviada hidden">Mensagem enviada!</p>
+        <!-- Campo: Nome -->
+        <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome completo">
         </div>
-    </section>
+
+        <!-- Campo: E-mail -->
+        <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com">
+        </div>
+
+        <!-- Campo: Mensagem -->
+        <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+        </div>
+
+        <!-- Mensagem de feedback (erro ou sucesso) -->
+        <div id="msg-feedback"></div>
+
+        <button type="submit" id="btn-enviar">Enviar mensagem</button>
+
+    </form>
+</section>
     <script src="script.js"></script>
 </body>
 

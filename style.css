@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rosa-forte: #ff6b9d;
+  --rosa-claro: #ffb3cc;
+  --rosa-fundo: #fff0f5;
+  --vermelho-laco: #e8004d;
+  --branco: #ffffff;
+  --texto: #5a2a4e;
+  --texto-claro: #9b6b8a;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--rosa-fundo);
+  color: var(--texto);
+  background-image: radial-gradient(circle, var(--rosa-claro) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Nav ── */
+nav {
+  background-color: var(--rosa-forte);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 4px 0 var(--vermelho-laco);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--branco);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 var(--vermelho-laco);
+}
+
+.logo::before {
+  content: "🎀 ";
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav ul li a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: background-color 0.2s, transform 0.1s;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: var(--branco);
+  color: var(--rosa-forte);
+  transform: scale(1.05);
+}
+
+/* ── Sections ── */
+section {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 32px 28px;
+  background-color: var(--branco);
+  border-radius: 20px;
+  border: 3px solid var(--rosa-claro);
+  box-shadow: 6px 6px 0 var(--rosa-claro);
+  position: relative;
+}
+
+section::before {
+  content: "🎀";
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  font-size: 1.4rem;
+}
+
+/* ── Headings ── */
+h1 {
+  font-size: 1.5rem;
+  color: var(--rosa-forte);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: var(--rosa-forte);
+  margin-bottom: 14px;
+  border-bottom: 3px dotted var(--rosa-claro);
+  padding-bottom: 8px;
+}
+
+/* ── Paragrafos e listas ── */
+p {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--texto);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+ul li::marker {
+  color: var(--rosa-forte);
+  content: "♡  ";
+}
+
+/* ── Links ── */
+a {
+  color: var(--rosa-forte);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--rosa-claro);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+a:hover {
+  color: var(--vermelho-laco);
+  border-bottom-color: var(--vermelho-laco);
+}
+
+/* ── Formulário de comentário ── */
+.form-comentario {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-comentario textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.97rem;
+  color: var(--texto);
+  background-color: var(--rosa-fundo);
+  border: 2px solid var(--rosa-claro);
+  border-radius: 14px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-comentario textarea:focus {
+  border-color: var(--rosa-forte);
+  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.18);
+}
+
+.form-comentario textarea::placeholder {
+  color: var(--texto-claro);
+}
+
+#btn-enviar {
+  align-self: flex-start;
+  background-color: var(--rosa-forte);
+  color: var(--branco);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 10px 26px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--vermelho-laco);
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.1s;
+}
+
+#btn-enviar:hover {
+  background-color: var(--vermelho-laco);
+  transform: translateY(-2px);
+}
+
+#btn-enviar:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--vermelho-laco);
+}
+
+.msg-enviada {
+  color: var(--rosa-forte);
+  font-weight: 700;
+  font-size: 0.97rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+
+  nav ul {
+    gap: 6px;
+  }
+
+  nav ul li a {
+    font-size: 0.82rem;
+    padding: 5px 11px;
+  }
+
+  section {
+    margin: 20px 12px;
+    padding: 24px 18px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  p, ul li {
+    font-size: 0.93rem;
+  }
+}
